@@ -30,6 +30,12 @@ in inventory or config file use ansible_password= < password > or use --ask-pass
 
 `sudo apt install sshpass`
 
+username password via configfile
+
+    [test_ssh:vars]
+    ansible_user=root
+    ansible_password=root
+
 Passing Adhoc commands
 
 `ansible test_ssh -a "free -h" -u root --ask-pass`
@@ -49,6 +55,7 @@ View list of inventory
 `ansible-inventory -i <inventory-file> --list`
 
 
+
 *how to add known hosts ??*
 
 in ansible config file:
@@ -58,5 +65,3 @@ in ansible config file:
 
 source :
 [How to ignore ansible SSH authenticity checking?](https://stackoverflow.com/questions/32297456/how-to-ignore-ansible-ssh-authenticity-checking)
-
-
