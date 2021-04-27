@@ -34,3 +34,29 @@ Passing Adhoc commands
 
 `ansible test_ssh -a "free -h" -u root --ask-pass`
 
+Running a playbook
+
+`ansible-playbook <playbook.yaml>`
+
+limiting where playbooks or ansible commands run 
+
+`ansible-playbook <playbook.yaml> --limit db`
+
+    only runs the playbook on db
+
+View list of inventory
+
+`ansible-inventory -i <inventory-file> --list`
+
+
+*how to add known hosts ??*
+
+in ansible config file:
+
+    [defaults]
+    host_key_checking = False
+
+source :
+[How to ignore ansible SSH authenticity checking?](https://stackoverflow.com/questions/32297456/how-to-ignore-ansible-ssh-authenticity-checking)
+
+

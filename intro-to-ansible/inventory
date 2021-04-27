@@ -1,2 +1,7 @@
 [test_ssh]
 172.17.0.2
+172.17.0.3
+
+[test_ssh:vars]
+ansible_user=root
+ansible_password=root
