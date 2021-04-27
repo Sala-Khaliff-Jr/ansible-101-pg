@@ -55,7 +55,6 @@ View list of inventory
 `ansible-inventory -i <inventory-file> --list`
 
 
-
 *how to add known hosts ??*
 
 in ansible config file:
@@ -65,3 +64,26 @@ in ansible config file:
 
 source :
 [How to ignore ansible SSH authenticity checking?](https://stackoverflow.com/questions/32297456/how-to-ignore-ansible-ssh-authenticity-checking)
+
+Check Playbook Syntax
+
+`ansible-playbook playbook.yaml --syntax-check`
+
+
+To maintain service of a software use Handlers
+
+Print all the info about the system
+
+`ansible -i inventory test_ssh -m setup`
+
+Encrypt secrets file
+
+`ansible-vault encrypt vars/secrets.yaml`
+
+To decrypt the vault
+
+`ansiblie-playbook --ask-vault-pass`
+
+    test
+
+
