@@ -86,4 +86,6 @@ To decrypt the vault
 
     test
 
+To install Ansible Galaxy Role
 
+`ansible-galaxy intall <role-name>`

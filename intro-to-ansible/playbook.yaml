@@ -19,12 +19,24 @@
         name : apache2
         state : restarted
         enabled : true # enable after restart
-
+  
+  # initiate the tasks of roles 
+  roles:
+  # directory name under roles directory
+    - curl
+    # install galaxy package via ansible-galaxy
+    - geerlingguy.java 
+  
   tasks : 
     # Task Management
     # Create a file for tasks and import it
+    # if import_tasks doesnt' work try include_tasks
     - import_tasks : tasks/apache.yaml
     
+    # install curl using role but amang tasks
+    - include_role : 
+        name : curl
+
     - name: display environment 
       shell: "echo $ENV_VAR_A $ENV_VAR_B secret password is $PASSWORD "
       # set environment variables in shell
