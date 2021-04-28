@@ -1,8 +1,8 @@
 # role file - ansible automatically picks up
 ---
-- name : Installing curl
+- name: Installing curl
   # use yum or pacman based on distro
   # package module for generic installation
   apt:
-    name : curl
-    state : present
+    name: curl
+    state: present

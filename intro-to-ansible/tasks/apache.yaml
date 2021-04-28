@@ -1,10 +1,10 @@
 # Dedicated files for storing tasks
 ---
-- name : Installing apache2
+- name: Installing apache2
   # use yum or pacman based on distro
   # package module for generic installation
   apt:
-    name : apache2
-    state : present
+    name: apache2
+    state: present
   # to call the handler by its name
-  notify : restart apache
+  notify: restart apache

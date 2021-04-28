@@ -89,3 +89,13 @@ To decrypt the vault
 To install Ansible Galaxy Role
 
 `ansible-galaxy intall <role-name>`
+
+# Ansible Testing
+
+Yaml lint
+
+`pip install yamllint`
+
+Check yaml files format
+
+`yamllint .`
