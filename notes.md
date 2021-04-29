@@ -92,10 +92,40 @@ To install Ansible Galaxy Role
 
 # Ansible Testing
 
-Yaml lint
+## Yaml lint
 
 `pip install yamllint`
 
 Check yaml files format
 
 `yamllint .`
+
+## Ansible Syntax Check
+
+- run a simple syntax check, whether ansible can put together tasks, modules etc.
+
+`ansible-playbook playbbok.yaml --syntax-check`
+
+Ansible Lint
+
+`pip install ansible-lint`
+
+To run ansible-lint [unencrypt before running]
+
+`ansible-lint playbook.yaml`
+
+
+## Molecule testing
+
+- instead of manually creating instance for testing ansible, molecule can be used
+
+`pip install molecule`
+
+To create a new moleculr role
+
+`molecule init role myrole`
+
+Docker is not in the molecule core, to test with docker image 
+
+`pip3 install molecule-docker`
+

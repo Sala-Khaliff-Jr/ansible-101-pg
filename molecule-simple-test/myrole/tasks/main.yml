@@ -1,0 +1,5 @@
+---
+# tasks file for myrole
+tasks:
+  - name: ping google
+    command: ping google.com
