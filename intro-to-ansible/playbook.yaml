@@ -24,7 +24,7 @@
     # directory name under roles directory
     - curl
     # install galaxy package via ansible-galaxy
-    - geerlingguy.java 
+    # - geerlingguy.java 
   tasks: 
     # Task Management
     # Create a file for tasks and import it
@@ -35,6 +35,8 @@
         name: curl
     - name: display environment 
       shell: "echo $ENV_VAR_A $ENV_VAR_B secret password is $PASSWORD "
+      # if there are no changes made, tell ansible by passing changed_when
+      changed_when : false
       # set environment variables in shell
       environment : 
         - ENV_VAR_A: "{{ var_group['var_a'] }}"
@@ -45,3 +47,4 @@
     # To view the output of a command in ansible
     - debug:
         msg: "{{ env_out.stdout }}"
+        
